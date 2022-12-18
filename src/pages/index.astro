@@ -33,18 +33,18 @@ import Card from "../components/Card.astro";
         body="Come say hi to our amazing Discord community. ❤️"
       />
     </ul>
-    <button class="btn w-32 btn-primary">Click Me</button>
-    <button class="btn w-32 btn-secondary">Click Me</button>
-    <button class="btn w-32 btn-tertiary">Click Me</button>
-    <button class="btn w-32 btn-accent">Click Me</button>
-    <button class="btn w-32 btn-neutral">Click Me</button>
+    <div class="grid grid-flow-row gap-4 py-4">
+      <button class="btn w-32 btn-primary">Click Me</button>
+      <button class="btn w-32 btn-secondary">Click Me</button>
+      <button class="btn w-32 btn-tertiary">Click Me</button>
+      <button class="btn w-32 btn-accent">Click Me</button>
+      <button class="btn w-32 btn-neutral">Click Me</button>
+    </div>
   </main>
 </Layout>
 
 <style>
   .btn {
     @apply rounded-full;
-    @apply block;
-    @apply m-3;
   }
 </style>
