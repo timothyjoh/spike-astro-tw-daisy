@@ -1,12 +1,20 @@
 ---
 title: 'Markdown + Tailwind'
 layout: ../layouts/main.astro
+theme: 'wireframe'
 ---
 
 import Button from '../components/Button.astro';
 
 <div class="grid place-items-center h-screen content-center">
 	<Button>Tailwind Button in Markdown!</Button>
+
+	<div class="m-3 mockup-code">
+		<pre data-prefix="$"><code>npm i daisyui</code></pre>
+		<pre data-prefix=">" class="text-warning"><code>installing...</code></pre>
+		<pre data-prefix=">" class="text-success"><code>Done!</code></pre>
+	</div>
+
 	<a href="/" class="p-4 underline">
 		Go home...
 	</a>

@@ -1,24 +1,59 @@
 ---
-// Component Imports
-import Button from '../components/Button.astro';
+import Main from '../layouts/main.astro'
+import Button from '../components/Button.astro'
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
-	</head>
+<Main content={{ title: 'Welcome to Astro' }}>
+  <div class="hero min-h-screen bg-base-200">
+    <div class="hero-content text-center">
+      <div class="max-w-md">
+        <h1 class="text-5xl font-bold">Hello there</h1>
+        <p class="py-6">
+          Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+          excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a
+          id nisi.
+        </p>
+        <Button class="btn-primary btn">Get Started</Button>
+      </div>
+    </div>
+  </div>
+  <div class="grid h-screen place-items-center content-center">
+    <div class="grid-flow-col">
+      <button class="btn">Button</button>
+      <button class="btn-primary btn">Button</button>
+      <button class="btn-secondary btn">Button</button>
+      <button class="btn-accent btn">Button</button>
+      <button class="btn-ghost btn">Button</button>
+      <button class="btn-link btn">Button</button>
+    </div>
 
-	<body>
-		<div class="grid place-items-center h-screen content-center">
-			<Button>Tailwind Button in Astro!</Button>
-			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
-		</div>
-	</body>
-</html>
+    <div class="grid-flow-col">
+      <button class="btn-info btn">Info</button>
+      <button class="btn-success btn">Success</button>
+      <button class="btn-warning btn">Warning</button>
+      <button class="btn-error btn">Error</button>
+    </div>
+    <article class="prose m-16">
+      <h1>Garlic bread with cheese: What the science tells us</h1>
+      <p>
+        For years parents have espoused the health benefits of eating garlic
+        bread with cheese to their children, with the food earning such an
+        iconic status in our culture that kids will often dress up as warm,
+        cheesy loaf for Halloween.
+      </p>
+      <p>
+        But a recent study shows that the celebrated appetizer may be linked to
+        a series of rabies cases springing up around the country.
+      </p>
+      <!-- ... -->
+    </article>
+    <div class="grid-flow-col">
+      <a href="/markdown-page" class="btn-ghost btn">Markdown page</a>
+      <a href="/lorem" class="btn-ghost btn">Lorem w/ line clamp</a>
+      <a href="/phone" class="btn-ghost btn">Phone page</a>
+    </div>
+  </div>
+</Main>
