@@ -7,12 +7,12 @@ module.exports = {
     aspectRatio: false,
   },
   plugins: [
-    require('@tailwindcss/line-clamp'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/container-queries'),
     require('@tailwindcss/forms'),
     require('daisyui'),
+    require('@tailwindcss/line-clamp'),
   ],
   daisyui: {
     styled: true,
